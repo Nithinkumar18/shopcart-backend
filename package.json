@@ -1,0 +1,28 @@
+{
+  "name": "shopcart-backend",
+  "version": "1.0.0",
+  "description": "This is the backend application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nithinkumar18/shopcart-backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nithinkumar18/shopcart-backend/issues"
+  },
+  "homepage": "https://github.com/Nithinkumar18/shopcart-backend#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "helmet": "^8.1.0",
+    "mongoose": "^8.23.0",
+    "morgan": "^1.10.1"
+  }
+}
