@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import helmet from "helmet";
 import morgan from "morgan";
-
+import authRoutes from "./src/routes/authRoutes.js";
 const app = express();
 
 
@@ -14,12 +14,13 @@ app.use(express.json());
 app.use(cors());
 app.use(helmet());
 app.use(morgan(':time  :method for  :url was received - StatusCode :status - :response-time ms'));
-
-app.get('/health', (req, res) => {
+app.use("/auth",authRoutes);
+app.get('/health', () => {
     res.status(200).json({
         "status": "success",
         "message": "ShopCart API is running 🆙"
     })
 })
+
 
 export default app;
