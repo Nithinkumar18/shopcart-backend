@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+import AppError from "../utils/AppError.js";
 
 dotenv.config();
 
@@ -16,7 +17,7 @@ async function connectToDB(){
         
     }
     catch(err){
-        throw  Error(err);
+        throw new AppError(err);
         
     }
     
