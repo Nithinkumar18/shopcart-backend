@@ -49,8 +49,10 @@ async function login(uemail,upass) {
     try{
        
         const userToValidate = await User.findOne({email:uemail});
+       
         if(userToValidate === null) return null;
-        const validatePassword = await bcrypt.compare(upass,userToValidate.password);
+        const validatePassword = await bcrypt.compare(upass.trim(),userToValidate.password);
+      
         if(validatePassword){
            const {email,role} = userToValidate;
             const token =  jwt.sign({email,role},process.env.APP_WEB_SECRET,{expiresIn:'15m'});
