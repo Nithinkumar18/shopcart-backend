@@ -19,4 +19,4 @@ const globalErrorMiddleware = (err,req,res,next) => {
     });
 };
 
-export default {globalErrorMiddleware,routeNotFound};
+export  {globalErrorMiddleware,routeNotFound};
